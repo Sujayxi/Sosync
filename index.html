@@ -6,6 +6,9 @@
   <title>SoS ync</title>
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
   <!-- Caladea Font via Google Fonts (fallback: Cambria) -->
   <style>
     @font-face {
@@ -24,188 +27,203 @@
 <body class="loading">
 
   <!-- Splash Screen -->
-   
-  <div class="splash-screen">
-    <div class="splash-content">
-      <img src="images/logo.png" alt="Company Logo" class="logo" style="width: 200px; height: auto">
-      <p class = "company-title">Smart. Optimized. Solutions.</p>
+  <div class="splash-screen d-flex justify-content-center align-items-center">
+    <div class="splash-content text-center">
+      <img src="images/logo.png" alt="Company Logo" class="logo mb-3" style="width: 200px; height: auto">
+      <p class="company-title">Smart. Optimized. Solutions.</p>
     </div>
   </div>
-  
+
+  <!-- Video Background -->
+  <div class="video-wrapper">
+    <video autoplay muted loop playsinline class="w-100 h-100 position-absolute top-0 start-0" style="object-fit:cover;">
+      <source src="background1.mp4" type="video/mp4">
+    </video>
+  </div>
 
   <!-- Header Section -->
   <header>
-    <nav>
-      <div class="nav-brand">
-        <img src="images/logo.png" alt="Brand Logo" class="logo">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent px-3">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="#home">
+          <img src="images/logo.png" alt="Brand Logo" class="logo me-2">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#home">HOME</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">ABOUT</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">SERVICES</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
+          </ul>
+        </div>
       </div>
-      
-      <!-- Hamburger Icon for Mobile (SVG) -->
-      <div class="hamburger" onclick="toggleMenu()" style= "position: relative; top: -15px; cursor: pointer;">
-        <!-- Inline SVG for hamburger icon -->
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M3 6H21" stroke="#f4f4f9" stroke-width="2" stroke-linecap="round"/>
-          <path d="M3 12H21" stroke="#f4f4f9" stroke-width="2" stroke-linecap="round"/>
-          <path d="M3 18H21" stroke="#f4f4f9" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </div>
-  
-      <ul class="nav-links">
-        <li><a href="#home">HOME</a></li>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#services">SERVICES</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-      </ul>
     </nav>
   </header>
-  
 
   <!-- Main Content Section -->
-  <div class="main-content">
-    
-    <div class="hero">
-      <h2>Empowering Growth with Smart Tech & Business Solutions</h2>
-      <p>We specialize in delivering tailored technology, automation, and business intelligence solutions that drive success for individuals and enterprises.</p>
-      <a href="#contact" class="cta-button">Let’s Collaborate</a>
+  <div class="main-content container-fluid pt-5">
+    <div class="hero row justify-content-center align-items-center text-center py-5">
+      <div class="col-12 col-md-10 col-lg-8">
+        <h2 class="display-5 fw-bold">Empowering Growth with Smart Tech & Business Solutions</h2>
+        <p class="lead">We specialize in delivering tailored technology, automation, and business intelligence solutions that drive success for individuals and enterprises.</p>
+        <a href="#contact" class="btn btn-primary btn-lg mt-3">Let's Collaborate</a>
+      </div>
     </div>
 
     <!-- Tech Stack Marquee -->
-    <h2 class="tech-stack-title">Our Tech Stack</h2>
-    <div class="slider" reverse="true" style="
-    --width: 200px;
-    --height: 200px;
-    --quantity: 7;
-">
-    <div class="list">
-        <div class="item" style="--position: 1"><img src="images/analytics.png" alt=""></div>
-        <div class="item" style="--position: 2"><img src="images/android.png" alt=""></div>
-        <div class="item" style="--position: 3"><img src="images/aws.png" alt=""></div>
-        <div class="item" style="--position: 4"><img src="images/ios.png" alt=""></div>
-        <div class="item" style="--position: 5"><img src="images/kotlin.png" alt=""></div>
-        <div class="item" style="--position: 6"><img src="images/mern.png" alt=""></div>
-        <div class="item" style="--position: 7"><img src="images/power.png" alt=""></div>
-        
+    <h2 class="tech-stack-title text-center">Our Tech Stack</h2>
+    <div class="slider d-flex justify-content-center align-items-center" reverse="true" style="--width: 200px; --height: 200px; --quantity: 7;">
+      <div class="list d-flex">
+        <div class="item" style="--position: 1"><img src="images/analytics.png" alt="" class="img-fluid"></div>
+        <div class="item" style="--position: 2"><img src="images/android.png" alt="" class="img-fluid"></div>
+        <div class="item" style="--position: 3"><img src="images/aws.png" alt="" class="img-fluid"></div>
+        <div class="item" style="--position: 4"><img src="images/ios.png" alt="" class="img-fluid"></div>
+        <div class="item" style="--position: 5"><img src="images/kotlin.png" alt="" class="img-fluid"></div>
+        <div class="item" style="--position: 6"><img src="images/mern.png" alt="" class="img-fluid"></div>
+        <div class="item" style="--position: 7"><img src="images/power.png" alt="" class="img-fluid"></div>
+      </div>
     </div>
-</div>
-    
-    
-    
+
     <!-- About Us Section -->
-    <section id="about" class="section">
-      <h2>About SoS</h2>
+    <section id="about" class="section container py-5">
+      <h2 class="mb-3">About SoS</h2>
       <p>SoS is a dynamic team of engineers, developers, and business consultants offering scalable tech solutions. We help startups, professionals, and businesses automate operations, build powerful digital platforms, and unlock smarter ways to work and grow.</p>
     </section>
 
-        <!-- Services Section -->
-<section id="services" class="section">
-  <h2>Our Services</h2>
-<div class="service-cards-horizontal">
-  <div class="card">
-    <h3><i class="fas fa-cogs" ></i> Business Process Automation</h3>
-    <p>We streamline repetitive and manual tasks using smart automation, freeing up your time and resources for what truly matters.</p>
-  </div>
-
-  <div class="card">
-    <h3><i class="fas fa-code"></i> Custom Software & Web Solutions</h3>
-    <p>From internal tools to public-facing apps, we build robust, scalable, and intuitive platforms tailored to your needs.</p>
-  </div>
-
-  <div class="card">
-    <h3><i class="fas fa-database"></i> Data Analytics & Dashboards</h3>
-    <p>Make informed decisions with interactive dashboards, data pipelines, and insightful visualizations designed for impact.</p>
-  </div>
-
-  <div class="card">
-    <h3><i class="fas fa-cloud"></i> Cloud Integration & DevOps</h3>
-    <p>Deploy faster, scale smarter, and secure your infrastructure with our end-to-end DevOps and cloud services.</p>
-  </div>
-
-  <div class="card">
-    <h3><i class="fas fa-lightbulb"></i> Tech Consulting & Strategy</h3>
-    <p>We guide individuals and organizations on adopting the right technologies, tools, and workflows to stay ahead.</p>
-  </div>
-
-  <div class="card">
-    <h3><i class="fas fa-users"></i> Startup & SME Support</h3>
-    <p>We partner with growing businesses to provide affordable tech stacks, MVP development, and go-to-market support.</p>
-  </div>
-</div>
-
-</section>  
-
+    <!-- Services Section -->
+    <section id="services" class="section container py-5">
+      <h2 class="mb-4">Our Services</h2>
+      <div class="row g-4 service-cards-horizontal flex-nowrap overflow-auto">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 flex-shrink-0">
+          <div class="card h-100">
+            <h3 class="h5"><i class="fas fa-cogs me-2"></i> Business Process Automation</h3>
+            <p>We streamline repetitive and manual tasks using smart automation, freeing up your time and resources for what truly matters.</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 flex-shrink-0">
+          <div class="card h-100">
+            <h3 class="h5"><i class="fas fa-code me-2"></i> Custom Software & Web Solutions</h3>
+            <p>From internal tools to public-facing apps, we build robust, scalable, and intuitive platforms tailored to your needs.</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 flex-shrink-0">
+          <div class="card h-100">
+            <h3 class="h5"><i class="fas fa-database me-2"></i> Data Analytics & Dashboards</h3>
+            <p>Make informed decisions with interactive dashboards, data pipelines, and insightful visualizations designed for impact.</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 flex-shrink-0">
+          <div class="card h-100">
+            <h3 class="h5"><i class="fas fa-cloud me-2"></i> Cloud Integration & DevOps</h3>
+            <p>Deploy faster, scale smarter, and secure your infrastructure with our end-to-end DevOps and cloud services.</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 flex-shrink-0">
+          <div class="card h-100">
+            <h3 class="h5"><i class="fas fa-lightbulb me-2"></i> Tech Consulting & Strategy</h3>
+            <p>We guide individuals and organizations on adopting the right technologies, tools, and workflows to stay ahead.</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 flex-shrink-0">
+          <div class="card h-100">
+            <h3 class="h5"><i class="fas fa-users me-2"></i> Startup & SME Support</h3>
+            <p>We partner with growing businesses to provide affordable tech stacks, MVP development, and go-to-market support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Our Work Section -->
-    <section id="work" class="section">
-      <h2>Our Work</h2>
-      <div class="gallery">
-        <img src="images/project1.png" alt="Project 1" class="gallery-item">
-        <img src="images/project2.png" alt="Project 2" class="gallery-item">
-        <img src="images/project3.png" alt="Project 3" class="gallery-item">
+    <section id="work" class="section container py-5">
+      <h2 class="mb-4">Our Work</h2>
+      <div class="row gallery g-3 justify-content-center">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <img src="images/project1.png" alt="Project 1" class="gallery-item img-fluid">
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <img src="images/project2.png" alt="Project 2" class="gallery-item img-fluid">
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <img src="images/project3.png" alt="Project 3" class="gallery-item img-fluid">
+        </div>
       </div>
     </section>
 
     <!-- Team Section -->
-    <section id="team" class="section">
-      <h2>Our Team</h2>
-      <div class="team-cards">
-    <div class="card">
-    <h3>Sujay Nanaware</h3>
-    <p>Founder & Tech Architect</p>
-  </div>
-  <div class="card">
-    <h3>Juan Peatro</h3>
-    <p>Business Development Lead</p>
-  </div>
-  <div class="card">
-    <h3>Anvay Atre</h3>
-    <p>UI/UX & Product Designer</p>
-  </div>
-  <div class="card">
-    <h3>Nishad</h3>
-    <p>Automation & Data Specialist</p>
-  </div>
-</div>
-
+    <section id="team" class="section container py-5">
+      <h2 class="mb-4">Our Team</h2>
+      <div class="row team-cards g-3 justify-content-center">
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="card h-100">
+            <h3 class="h5">Sujay Nanaware</h3>
+            <p>Founder & Tech Architect</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="card h-100">
+            <h3 class="h5">Juan Peatro</h3>
+            <p>Business Development Lead</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="card h-100">
+            <h3 class="h5">Anvay Atre</h3>
+            <p>UI/UX & Product Designer</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="card h-100">
+            <h3 class="h5">Nishad</h3>
+            <p>Automation & Data Specialist</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section id="clients" class="section">
-      <h2>What Our Clients Say</h2>
-<div class="testimonials">
-  <div class="testimonial">
-    <p>"SoS built a custom internal tool that helped us cut down 30% of our manual tasks. Their team is brilliant, responsive, and professional."</p>
-    <p class="client-name">- Neha Verma, COO at BrightPath Logistics</p>
-  </div>
-  <div class="testimonial">
-    <p>"We were struggling with data management until SoS created a dashboard that transformed the way we make business decisions."</p>
-    <p class="client-name">- Raj Patel, Founder at StartTech Consulting</p>
-  </div>
-</div>
-
+    <section id="clients" class="section container py-5">
+      <h2 class="mb-4">What Our Clients Say</h2>
+      <div class="row testimonials g-3 justify-content-center">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="testimonial card h-100">
+            <p>"SoS built a custom internal tool that helped us cut down 30% of our manual tasks. Their team is brilliant, responsive, and professional."</p>
+            <p class="client-name">- Neha Verma, COO at BrightPath Logistics</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="testimonial card h-100">
+            <p>"We were struggling with data management until SoS created a dashboard that transformed the way we make business decisions."</p>
+            <p class="client-name">- Raj Patel, Founder at StartTech Consulting</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
-      <h2>Let’s Build Something Great</h2>
-<p>Ready to take your business to the next level? Tell us what you're working on, and we’ll show you how we can help.</p>
-<form action="https://docs.google.com/forms/d/e/1FAIpQLSeueWsgFUni-ZS4xiiO_YSjr91X-C-aG_9mMDDo3Z80dn1d0w/formResponse" method="POST" target="_blank">
-  <input type="text" name="entry.294622178" placeholder="Your Name" required>
-  <input type="email" name="entry.1056698326" placeholder="Your Email" required>
-  <textarea name="entry.1194294917" placeholder="Your Message" required></textarea>
-  <button type="submit">Send Message</button>
-</form>
-
-<div class="video-wrapper">
-  <video autoplay muted loop playsinline>
-      <source src="background1.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-  </video>
-</div>
-
+    <section id="contact" class="section container py-5">
+      <h2 class="mb-3">Let's Build Something Great</h2>
+      <p>Ready to take your business to the next level? Tell us what you're working on, and we'll show you how we can help.</p>
+      <form action="https://docs.google.com/forms/d/e/1FAIpQLSeueWsgFUni-ZS4xiiO_YSjr91X-C-aG_9mMDDo3Z80dn1d0w/formResponse" method="POST" target="_blank" class="row g-3 justify-content-center">
+        <div class="col-12 col-md-6">
+          <input type="text" name="entry.294622178" class="form-control mb-2" placeholder="Your Name" required>
+        </div>
+        <div class="col-12 col-md-6">
+          <input type="email" name="entry.1056698326" class="form-control mb-2" placeholder="Your Email" required>
+        </div>
+        <div class="col-12">
+          <textarea name="entry.1194294917" class="form-control mb-2" placeholder="Your Message" required></textarea>
+        </div>
+        <div class="col-12 text-center">
+          <button type="submit" class="btn btn-primary px-5">Send Message</button>
+        </div>
+      </form>
     </section>
   </div>
 
   <script src="js/script.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html> 
